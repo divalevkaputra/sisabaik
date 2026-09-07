@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulir prototipe untuk mendaftarkan usaha sebagai penyedia makanan di SisaBaik."
+    />
+    <title>Daftar Penyedia | SisaBaik</title>
+  </head>
+  <body>
+    <a href="#konten-utama">Lewati ke konten utama</a>
+
+    <header>
+      <p><strong>SisaBaik</strong></p>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="daftar-penyedia.html" aria-current="page">Daftar Sebagai Penyedia
+          </a></li>
+          <li>
+            <a href="tawarkan-makanan.html">Tawarkan Makanan</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten-utama" tabindex="-1">
+        <h1> Daftar sebagai penyedia SisaBaik </h1>
+        <p>
+          Gunakan data fiktif selama praktikum.Formulir ini belum terhubung ke server dan  basis data.
+    </p>
+    <p id="petunjuk-wajib">kolom bertanda <strong>*</strong> wajib diisi</p>
+
+    <form
+        action="daftar-penyedia.html"
+        method="get"
+        aria-describedby="petunjuk-wajib"
+    >
+
+    <p>
+        <label for="nama-usaha">Nama usaha</label><br>
+        <input type="text" id="nama-usaha" name="nama-usaha" autocomplete="organization" 
+        minlength="3"
+        maxlength="100" required />
+
+        </p>
+
+        <p>
+            <label for="jenis-usaha">Jenis usaha</label><br>
+            <select id="jenis-usaha" name="jenis-usaha" required>
+                <option value="">Pilih jenis usaha</option>
+                <option value="restoran">Restoran</option>
+                <option value="toko-roti">Toko Roti</option>
+                <option value="katerin">Katering</option>
+                <option value="ritel">Toko Ritel</option>
+                <option value="hotel">Hotel</option>
+                <option value="lainnya">Lainnya</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="deskripsi-usaha">Deskripsi usaha</label><br>
+            <textarea id="deskripsi-usaha" name="deskripsi-usaha" rows="5" maxlength="500" 
+            aria-describedby="bantuan-deskripsi"
+            ></textarea>
+            <small id="bantuan-deskripsi">
+                Jelaskan jenis produk dan jam oprasional,maksimal 500 karakter.
+            </small>
+        </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Penanggung jawab</legend>
+
+        <p>
+            <label for="nama-penanggung-jawab">Nama penanggung jawab</label><br>
+            <input type="text" id="nama-penanggung-jawab" name="nama-penanggung-jawab" 
+            autocomplete="name" minlength="3" maxlength="100" required />
+        </p>
+
+        <p>
+            <label for="email">Alamat email</label><br>
+            <input type="email" id="email" name="email" 
+            autocomplete="email" maxlength="254" aria-describedby="bantuan-email" required><br>
+            <small id="bantuan-email">Contoh: nama@usaha.example</small>
+        </p>
+
+        <p>
+            <label for="telepon">Nomor telepon</label><br>
+            <input type="tel" id="telepon" name="telepon" 
+            autocomplete="tel" inputmode="tel" pattern="[0-9+()]{8,20}" aria-describedby="bantuan-telepon" required><br>
+            <small id="bantuan-telepon">Gunakan 8-20 karakter berupa angka,spasi,+, atau ( )</small>
+            </p>    
+            </fieldset>
+
+            <fieldset>
+                <legend>Penanggung Jawab</legend>
+
+              <p> 
+                <label for="nama-penanggung-jawab">Nama lengkap</label><br>
+                <input
+                type="text"
+                id="nama-penanggung-jawab"
+                name="nama-penanggung-jawab"
+                autocomplete="name"
+                minlength="3"
+                maxlength="100"
+                required
+                >
+              </p>
+
+              <p>
+                <label for="email">Alamat email</label><br>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                maxlength="254"
+                aria-describedby="bantuan-email"
+                required
+                ><br>
+                <small id="bantuan-email">Contoh: nama@usaha.example</small>
+              </p>
+
+              <p>
+                <label for="telepon">Nomor telepon</label><br>
+                <input
+                type="tel"
+                id="telepon"
+                name="telepon"
+                autocomplete="tel"
+                inputmode="tel"
+                pattern="[0-9+()]{8,20}"
+                aria-describedby="bantuan-telepon"
+                required
+                ><br>
+                <small id="bantuan-telepon">Gunakan 8-20 karakter berupa angka, spasi, +, atau ( )</small>
+              </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Lokasi usaha</legend>
+
+              <p>
+                <label for="alamat">Alamat lengkap</label><br>
+                <textarea
+                id="alamat"
+                name="alamat"
+                rows="4"
+                autocomplete="street-address"
+                minlength="10"
+                maxlength="250"
+                required
+                ></textarea>
+              </p>
+
+              <p>
+                <label for="kota">Kabupaten atau kota</label><br>
+                <input
+                type="text"
+                id="kota"
+                name="kota"
+                autocomplete="address-level2"
+                maxlength="100"
+                required
+                >
+              </p>
+              <p>
+                <label for="provinsi">Provinsi</label><br>
+                <input
+                type="text"
+                id="provinsi"
+                name="provinsi"
+                autocomplete="address-level1"
+                maxlength="100"
+                required
+                >
+
+              <p>
+                <label for="kode-pos">Kode pos</label><br>
+                <input
+                type="text"
+                id="kode-pos"
+                name="kode-pos"
+                autocomplete="postal-code"
+                inputmode="numeric"
+                pattern="[0-9]{5}"
+                aria-describedby="bantuan-kode-pos"
+                required
+                ><br>
+                <small id="bantuan-kode-pos">Gunakan 5 digit angka</small>
+              </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Persetujuan</legend>
+
+              <p>
+                <input
+                type="checkbox"
+                id="persetujuan"
+                name="persetujuan"
+                value="setuju"
+                required
+                >
+                <label for="persetujuan">Saya menyatakan bahwa informasi latihan ini tidak menggunakan
+data pribadi atau data usaha yang sebenarnya.</label>
+              </p>
+            </fieldset>
+
+            <p>
+              <button type="submit">Daftar</button>
+            </p>
+          </form>
+        </main>
+
+        <footer>
+          <p>&copy; 2024 SisaBaik. Semua hak dilindungi.</p>
+        </footer>
+      </body>
+    </html>
