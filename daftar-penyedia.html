@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta
       name="description"
       content="Formulir prototipe untuk mendaftarkan usaha sebagai penyedia makanan di SisaBaik."
-    />
+    >
     <title>Daftar Penyedia | SisaBaik</title>
   </head>
   <body>
@@ -43,7 +43,7 @@
         <label for="nama-usaha">Nama usaha</label><br>
         <input type="text" id="nama-usaha" name="nama-usaha" autocomplete="organization" 
         minlength="3"
-        maxlength="100" required />
+        maxlength="100" required >
 
         </p>
 
@@ -69,41 +69,17 @@
                 Jelaskan jenis produk dan jam oprasional,maksimal 500 karakter.
             </small>
         </p>
-        </fieldset>
-
-        <fieldset>
-            <legend>Penanggung jawab</legend>
-
-        <p>
-            <label for="nama-penanggung-jawab">Nama penanggung jawab</label><br>
-            <input type="text" id="nama-penanggung-jawab" name="nama-penanggung-jawab" 
-            autocomplete="name" minlength="3" maxlength="100" required />
-        </p>
-
-        <p>
-            <label for="email">Alamat email</label><br>
-            <input type="email" id="email" name="email" 
-            autocomplete="email" maxlength="254" aria-describedby="bantuan-email" required><br>
-            <small id="bantuan-email">Contoh: nama@usaha.example</small>
-        </p>
-
-        <p>
-            <label for="telepon">Nomor telepon</label><br>
-            <input type="tel" id="telepon" name="telepon" 
-            autocomplete="tel" inputmode="tel" pattern="[0-9+()]{8,20}" aria-describedby="bantuan-telepon" required><br>
-            <small id="bantuan-telepon">Gunakan 8-20 karakter berupa angka,spasi,+, atau ( )</small>
-            </p>    
-            </fieldset>
+        
 
             <fieldset>
                 <legend>Penanggung Jawab</legend>
 
               <p> 
-                <label for="nama-penanggung-jawab">Nama lengkap</label><br>
+                <label for="nama-penanggung-jawab">Nama lengkap*</label><br>
                 <input
                 type="text"
                 id="nama-penanggung-jawab"
-                name="nama-penanggung-jawab"
+                name="nama_penanggung_jawab"
                 autocomplete="name"
                 minlength="3"
                 maxlength="100"
@@ -206,19 +182,30 @@
                 value="setuju"
                 required
                 >
-                <label for="persetujuan">Saya menyatakan bahwa informasi latihan ini tidak menggunakan
-data pribadi atau data usaha yang sebenarnya.</label>
+                <label for="persetujuan">Saya menyatakan bahwa informasi latihan ini tidak menggunakan data pribadi atau data usaha yang sebenarnya.</label>
               </p>
-            </fieldset>
+              </fieldset>
 
             <p>
-              <button type="submit">Daftar</button>
+                <button type="submit">Daftar</button>
+                <button type="reset">Bersihkan</button>
             </p>
-          </form>
-        </main>
+        </form>
 
-        <footer>
-          <p>&copy; 2024 SisaBaik. Semua hak dilindungi.</p>
-        </footer>
-      </body>
-    </html>
+        <section aria-labelledby ="catatan-prototipe">
+            <h2 id="catatan-prototipe">apa yang terjadi setelah tombol dikirim?</h2>
+            <p>
+                Browser memeriksa atribut validasi HTML terlebih dahulu. Jika semua
+                input valid, halaman dimuat ulang dan pasangan nama-nilai terlihat
+                pada alamat halaman. Data belum disimpan. Pada chapter backend,
+                metode sementara ini akan diganti dengan pengiriman ke server.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 SisaBaik - proyek pembelajaran Pengembangan Web</p>
+    </footer>
+  </body>
+</html>
+            
