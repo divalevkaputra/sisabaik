@@ -4,28 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<header>
-      <p><strong>SisaBaik</strong></p>
+  <a class="skip-link" href="#konten-utama">lewati ke konten utama</a>
+
+<header class="site-header">
+      <div class="container header-layout">
+        <p class="brand">SisaBaik</p>
       <nav aria-label="Navigasi utama">
-        <ul>
+        <ul class="nav-list">
           <li><a href="index.html" aria-current="page">Beranda</a></li>
           <li><a href="#cara-kerja">Cara Kerja</a></li>
-          <li>
-            <a href="daftar-penyedia.html">Daftar Sebagai Penyedia</a>
-          </li>
+          <li> <a href="daftar-penyedia.html">Daftar Sebagai Penyedia</a></li>
           <li><a href="tawarkan-makanan.html">Tawarkan Makanan</a></li>
         </ul>
       </nav>
+      </div>
     </header>
 
     <main id="konten-utama" tabindex="-1">
-      <section aria-labelledby="judul-utama">
-        <h1 id="judul-utama">
+      <section calss="hero" aria-labelledby="judul-utama">
+        <div class="container hero-layout">
           Pulihkan nilai makanan berlebih bersama SisaBaik
         </h1>
+
+
+
+
+
+        
         <div style="text-align: center;">
           <img
             src="images/brans-sisabaik.png"
